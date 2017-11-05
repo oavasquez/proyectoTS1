@@ -1,0 +1,39 @@
+
+##obtener el nombre de la clase el peso y los requisitos por cada clase 
+
+
+////////////////////////////APLICADA PARA OBTENER REQUISITOS/////////////////////////////////////////////////////
+SELECT F.IdClase, F.nombre, F.peso ,D.IdClaseRequisito  
+FROM ClasesXRequisito as D 
+INNER JOIN
+(
+SELECT C.IdClase AS IdClase, C.Nombre AS nombre, C.Peso as peso 
+FROM PlanEstudioXClases AS A 
+INNER JOIN TblPlanEstudio AS B 
+ON(A.IdPlanEstudio=B.IdPlanEstudio)
+INNER JOIN TblClases AS C 
+ON(A.IdClases=C.IdClase)
+WHERE B.IdPlanEstudio=?
+) AS F
+ON(F.IdClase=D.IdClase)
+
+
+///////////////////////////APLICADA PARA OBTENER CLASES DE UN X PLAN DE ESTUDIO////////////////////////////
+SELECT C.IdClase AS IdClase, C.Nombre AS nombre, C.Peso as peso 
+FROM PlanEstudioXClases AS A 
+INNER JOIN TblPlanEstudio AS B 
+ON(A.IdPlanEstudio=B.IdPlanEstudio)
+INNER JOIN TblClases AS C 
+ON(A.IdClases=C.IdClase)
+WHERE B.IdPlanEstudio=?
+
+/////////////////////////////////////////////////////////////////
+REQUISITOS DE LAS CLASES
+
+SELECT A.IdClase as IdClase, A.IdClaseRequisito AS requisito, B.Nombre, B.Peso, B.Codigo
+FROM ClasesXRequisito as A
+INNER JOIN TblClases B
+on(A.IdClase=B.IdClase)
+WHERE A.IdPlanEstudio=1
+
+

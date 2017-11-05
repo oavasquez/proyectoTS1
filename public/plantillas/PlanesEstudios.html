@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Simulador para recomendar clases</title>
+	<link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="../css/controlador.css">
+</head>
+<body>
+
+	<nav class="navbar navbar-default">
+  <div class="container-fluid">
+  	<p class="navbar-text navbar-center">
+  	Agregar un nuevo plan de estudio</p>
+  </div>
+</nav>
+
+	<div class="container">
+		<div class="row col-md-5" >
+			<div class="form-group">	
+				<label>Nombre del Plan de estudio</label>
+				<input type="text" id="txtNombrePlanEstudio" class="form-control"><br>
+			</div>
+			<div class="form-group">	
+				<label>Carrera aplicada al plan de estudio</label>
+				<input type="text" id="txtNombrePlanEstudio" class="form-control"><br>
+			</div>
+			<div class="form-group">
+				<label>Años de duracion</label>
+				<input type="text" id="txtNombrePlanEstudio" class="form-control"><br>
+			</div>
+
+			
+			
+			
+		</div>
+
+		<div class="row col-md-1" >
+		</div>
+
+		<div class="row col-md-6" >
+			<div class="form-group">
+				<label>Nombre de la clase</label>
+				<input type="text" id="txtNombrePlanEstudio" class="form-control"><br>
+			</div>
+			<div class="form-group">
+				<label>Codigo</label>
+				<input type="text" id="txtNombrePlanEstudio" class="form-control"><br>
+			</div>
+			<div class="form-group">	
+				<label>Dificultad 1-5</label>
+				<input type="text" id="txtNombrePlanEstudio" class="form-control"><br>
+			</div>
+			
+			
+			<div class="input-group">
+			    <input type="text" id="txtNombrePlanEstudio" placeholder="Codigo Requisitos" class="form-control"><br>
+			    <span class="input-group-btn">
+				    <button class="btn btn-success">Agregar</button>
+			    </span>
+			 </div>
+			    <div class="row col-md-3">
+			    	<table class="table">
+			    		<tr class="table-active">
+			    			<td>CL1</td>
+			    			<td>CL2</td>
+			    		</tr>
+			    	</table>
+			    	
+			    </div>
+
+			</div>
+			
+		</div>
+		
+			<div class="row">
+				<table class="table ">
+					<thead>	
+					<tr>
+						<th scope="row">#</th>
+						<th scope="row">Nombre</th>
+						<th scope="row">Codigo</th>
+						<th scope="row">Dificultad</th>
+						<th scope="row">Requisitos</th>
+					</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>1</td>
+							<td>Clase </td>
+							<td>CL1</td>
+							<td>2</td>
+							<td>Ninguno</td>
+							<td><button class="btn btn-warning">Editar</button></td>
+							<td><button class="btn btn-danger">Eliminar</button></td>
+
+						</tr>
+						<tr>
+							<td>2</td>
+							<td>Clase 2</td>
+							<td>CL2</td>
+							<td>4</td>
+							<td>Ninguno</td>
+							<td><button class="btn btn-warning">Editar</button></td>
+							<td><button class="btn btn-danger">Eliminar</button></td>
+
+						</tr>
+						<tr>
+							<td>3</td>
+							<td>Clase 3</td>
+							<td>CL3</td>
+							<td>3</td>
+							<td>CL2</td>
+							<td><button class="btn btn-warning">Editar</button></td>
+							<td><button class="btn btn-danger">Eliminar</button></td>
+
+						</tr>
+						<tr>
+							<td>4</td>
+							<td>Clase 4</td>
+							<td>CL4</td>
+							<td>1</td>
+							<td>CL3,CL1</td>
+							<td><button class="btn btn-warning">Editar</button></td>
+							<td><button class="btn btn-danger">Eliminar</button></td>
+
+						</tr>
+						
+					</tbody>
+				</table>
+			</div>
+
+			<div class="row" style="text-align: center;">
+				<div class="form-group">
+					<button class="btn btn-primary form">Guardar</button>
+					<button class="btn btn-primary form">Cancelar</button>
+				</div>
+			</div>
+		
+
+	</div>
+
+	
+
+
+
+
+	<script type="text/javascript" src="../js/jquery-3.2.1.min.js"></script>
+	<script type="text/javascript" src="../js/go-debug.js"></script>
+	<script type="text/javascript" src="../js/CtrlPlanesEstudios.js"></script>
+	
+</body>
+</html>

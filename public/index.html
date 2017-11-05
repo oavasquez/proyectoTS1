@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Simulador para recomendar clases</title>
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="css/controlador.css">
+</head>
+<body>
+	<div class="content">
+			
+			<nav class="navbar navbar-default">
+				  <div class="container-fluid">
+				  	<p class="navbar-text navbar-center">
+				  	Simulador para calculos de clases</p>
+				  </div>
+			</nav>
+		
+
+
+
+
+
+		<div class="row ">
+
+			<div class="col-sm-3">
+
+				<table class="table">
+
+					<tbody>
+						 <tr>
+						 <th colspan="2" scope="col">Escoga el plan de estudio</th>					       
+					    </tr>
+					    <tr>
+					    	<td colspan="2">
+					      	 <select id="slcPlanEstudio" class="form-control" id="sel1">
+							  <option disabled selected>Plan de estudio</option>
+							  <option value="1">Plan estudio 1</option>
+							  <option value="2">Plan estudio 2</option>
+							  <option value="3">Plan estudio 3</option>
+							</select>
+
+					      </td>  
+					    </tr>
+					    <tr>
+					      <th scope="col">Cantidad de clases</th>
+					      <td><input class="form-control" id="txtCantidadClases" type="text" placeholder="#"></td>   
+					    </tr>
+					    <tr>
+					      <th scope="col">IndiceAcademico</th>
+					      <td><input class="form-control" id="txtIndiceAcademico" type="text" placeholder="0-100%"></td>   
+					    </tr>
+					    <tr>
+					      <th scope="col">Nivel de dificultad (promedio)</th>
+					      <td><input class="form-control" id="txtPromedio" type="text" placeholder="0-100%"></td>   
+					    </tr>
+					     <tr>
+					      <th scope="col">Tiempo en la carrera</th>
+					      <td><input class="form-control" id="txtTiempoCarrera" type="text" placeholder="años"></td>   
+					    </tr>
+						<tr>
+					      <td>
+					      	<button id="btnClasesApro"  class="btn btn-primary enviar">Calcular clases</button>
+					      </td>    
+					      <td><button id="btnLimpiar" class="btn btn-primary" >Limpiar</button></td>   
+					    </tr>
+					    <tr>
+					      <td>
+					      	<button id="btnConfiguracion"  class="btn btn-primary enviar">Configurar</button>
+					      </td>    
+					     
+					    </tr>
+					</tbody>
+				</table>				
+			</div>
+
+			<div class="col-sm-9">
+				<div id="myDiagramDiv"  >
+		     	
+		 		</div>
+			</div>
+		</div>
+
+	</div>
+
+	<script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
+	<script type="text/javascript" src="js/go-debug.js"></script>
+	<script type="text/javascript" src="js/controlador.js"></script>
+</body>
+</html>

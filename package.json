@@ -1,0 +1,23 @@
+{
+  "name": "calcularclases",
+  "version": "1.0.0",
+  "description": "Este es el ejercicios #1 de la slase de teoria de la simulacion",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/oavasquez/proyectoTS1.git"
+  },
+  "author": "oavasquez",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/oavasquez/proyectoTS1/issues"
+  },
+  "homepage": "https://github.com/oavasquez/proyectoTS1#readme",
+  "dependencies": {
+    "express": "^4.16.2",
+    "mysql": "^2.15.0"
+  }
+}
