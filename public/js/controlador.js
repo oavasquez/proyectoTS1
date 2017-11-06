@@ -98,91 +98,91 @@ jQuery(document).ready(function ($) {
 
 
 
-$("#slcPlanEstudio").click(function(){
-  limpiarGrafico()
-  obtenerClases();
-});
-
-  
-function obtenerClases(){
-  var nodeDataArrays=[];
-  var linkDataArrays=[];
-  var parametro ="codigoPlanEstudio="+$("#slcPlanEstudio").val();
-  //console.log(parametro);
-
-  $.ajax({
-     
-      url:"/obtenerClases",
-      //Tambien se puede utilizar el siguiente patron:
-      //url:"/mensajes/"+$("#slc-usuario").val()+"/"+codigoContacto,
-      data:parametro,
-      method:"GET",
-      dataType:"json",
-      success:function(respuesta){
-        //console.log(respuesta)
-       agregarClases(respuesta);
-
-
-      },
-      error:function(err){
-        console.log(err);
-      } 
-    });
-
- $.ajax({
-     
-      url:"/obtenerRequisitos",
-      //Tambien se puede utilizar el siguiente patron:
-      //url:"/mensajes/"+$("#slc-usuario").val()+"/"+codigoContacto,
-      data:parametro,
-      method:"GET",
-      dataType:"json",
-      success:function(respuesta){
-        //console.log(respuesta)
-        agregarRequisitos(respuesta);
-
-
-      },
-      error:function(err){
-        console.log(err);
-      } 
-    });
-
-
- 
-}
-
-
-$("#btnClasesApro").click(function(){
- var clasesCalcular=[];
-   myDiagram.nodes.each(function(n){ 
-    if (n.data.estado != "aprobada") {
-      //console.log("nombre: "+n.data.name+" id:"+n.data.key);
-      clasesCalcular.push(JSON.parse('{"key":'+n.data.key+', "name":"'+n.data.name+'"}'));
-      myDiagram.startTransaction("Cambio de color");
-      n.background="#00E03F";
-       myDiagram.commitTransaction("Con exito");
-     
-}
+  $("#slcPlanEstudio").click(function(){
+    limpiarGrafico()
+    obtenerClases();
   });
-   //console.log(clasesCalcular);
-   console.log(clasesCalcular);
 
-  
+    
+  function obtenerClases(){
+    var nodeDataArrays=[];
+    var linkDataArrays=[];
+    var parametro ="codigoPlanEstudio="+$("#slcPlanEstudio").val();
+    //console.log(parametro);
 
-});
+    $.ajax({
+       
+        url:"/obtenerClases",
+        //Tambien se puede utilizar el siguiente patron:
+        //url:"/mensajes/"+$("#slc-usuario").val()+"/"+codigoContacto,
+        data:parametro,
+        method:"GET",
+        dataType:"json",
+        success:function(respuesta){
+          //console.log(respuesta)
+         agregarClases(respuesta);
 
 
-function CalculandoSiguienteClases(clasesCandidatas){
+        },
+        error:function(err){
+          console.log(err);
+        } 
+      });
+
+   $.ajax({
+       
+        url:"/obtenerRequisitos",
+        //Tambien se puede utilizar el siguiente patron:
+        //url:"/mensajes/"+$("#slc-usuario").val()+"/"+codigoContacto,
+        data:parametro,
+        method:"GET",
+        dataType:"json",
+        success:function(respuesta){
+          //console.log(respuesta)
+          agregarRequisitos(respuesta);
+
+
+        },
+        error:function(err){
+          console.log(err);
+        } 
+      });
+
+
+   
+  }
+
+
+  $("#btnClasesApro").click(function(){
+   var clasesCalcular=[];
+     myDiagram.nodes.each(function(n){ 
+      if (n.data.estado != "aprobada") {
+        //console.log("nombre: "+n.data.name+" id:"+n.data.key);
+        clasesCalcular.push(JSON.parse('{"key":'+n.data.key+', "name":"'+n.data.name+'"}'));
+        myDiagram.startTransaction("Cambio de color");
+        n.background="#00E03F";
+         myDiagram.commitTransaction("Con exito");
+       
+        }
+    });
+     //console.log(clasesCalcular);
+     console.log(clasesCalcular);
+
+    
+
+  });
+
+
+  function CalculandoSiguienteClases(clasesCandidatas){
 
 
 
-}
+  }
 
-$("#btnLimpiar").click(function(){
-limpiarGrafico();
+  $("#btnLimpiar").click(function(){
+  limpiarGrafico();
 
-});
+  });
 
 
 
