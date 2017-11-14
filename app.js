@@ -42,7 +42,7 @@ app.get("/obtenerRequisitos",function(peticion,respuesta){
 app.get("/obtenerClases",function(peticion,respuesta){
 	//console.log(peticion.query.codigoPlanEstudio);
 	conexion.query(
-			'SELECT C.IdClase AS IdClase, C.Nombre AS nombre, C.Peso as peso '+
+			'SELECT C.IdClase AS IdClase, C.Nombre AS nombre, C.Peso as peso, C.UV  '+
 			'FROM PlanEstudioXClases AS A '+
 			'INNER JOIN TblPlanEstudio AS B '+
 			'ON(A.IdPlanEstudio=B.IdPlanEstudio) '+

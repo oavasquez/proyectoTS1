@@ -5,6 +5,7 @@
 	<title>Simulador para recomendar clases</title>
 	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="css/controlador.css">
+
 </head>
 <body>
 	<div class="content">
@@ -36,8 +37,6 @@
 					      	 <select id="slcPlanEstudio" class="form-control" id="sel1">
 							  <option disabled selected>Plan de estudio</option>
 							  <option value="1">Plan estudio 1</option>
-							  <option value="2">Plan estudio 2</option>
-							  <option value="3">Plan estudio 3</option>
 							</select>
 
 					      </td>  
@@ -52,7 +51,7 @@
 					    </tr>
 					    <tr>
 					      <th scope="col">Nivel de dificultad (promedio)</th>
-					      <td><input class="form-control" id="txtPromedio" type="text" placeholder="0-100%"></td>   
+					      <td><input class="form-control" id="txtDificultad" type="text" placeholder="0-100%"></td>   
 					    </tr>
 					     <tr>
 					      <th scope="col">Tiempo en la carrera</th>
@@ -60,25 +59,47 @@
 					    </tr>
 						<tr>
 					      <td>
-					      	<button id="btnClasesApro"  class="btn btn-primary enviar">Calcular clases</button>
+					      	<button id="btnClasesApro"  class="btn btn-primary enviar">1. Clases disponibles</button>
+					      </td>  
+
+					    </tr>
+					    <tr>	
+					      <td>
+					      	<button id="btnRecomendar"  class="btn btn-primary enviar">2. Clases recomendadas </button>
 					      </td>    
-					      <td><button id="btnLimpiar" class="btn btn-primary" >Limpiar</button></td>   
 					    </tr>
 					    <tr>
-					      <td>
-					      	<button id="btnConfiguracion"  class="btn btn-primary enviar">Configurar</button>
-					      </td>    
+					      <td><button id="btnLimpiar" class="btn btn-primary" >3. Limpiar</button></td>   
 					     
+					    </tr>
+					    <tr>
+					      <th scope="col">Cantidad UV Disponibles</th>
+					      <td><input disabled class="form-control" id="txtCantUV" type="text" placeholder="0-25UV"></td>   
 					    </tr>
 					</tbody>
 				</table>				
 			</div>
+			<div class="row col-sm-9" style="width:980px; text-align: center;">
 
-			<div class="col-sm-9">
+					<div class="col-sm-3" style="background-color: #ea7c7c;">Clases Aprobadas</div>
+					<div class="col-sm-3" style="background-color: #fc9f2d;">Clases Disponibles</div>
+					<div class="col-sm-3" style="background-color: #44CCFF;">Clases no aplican</div>
+					<div class="col-sm-3" style="background-color: #40EF52;">Clases recomendadas</div>
+					
+			</div>
+
+			<div class=" row col-sm-9">
+				
 				<div id="myDiagramDiv"  >
 		     	
 		 		</div>
 			</div>
+
+		</div>
+		<div class="row">
+			<table hidden id="tblClases">
+				
+			</table>
 		</div>
 
 	</div>
